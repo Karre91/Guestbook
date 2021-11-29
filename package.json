@@ -1,0 +1,19 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "Lektion 29 november",
+  "main": "index.js",
+  "scripts": {
+    "test": "Node JavaScript"
+  },
+  "keywords": [
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Karin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
