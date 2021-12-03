@@ -1,8 +1,1 @@
-[
-    {
-        "name": "test",
-        "email": "test",
-        "tel": "test",
-        "comment": "test"
-    }
-]
+[{"name":"test","email":"test","tel":"test","comment":"test"},{"name":"Karin","email":"","tel":"","comment":""},{"name":"hallå","email":"jjjja","tel":"","comment":""},{"name":"aa","email":"","tel":"","comment":""},{"name":"hello","email":"","tel":"","comment":""},{"name":"jajjja","email":"","tel":"","comment":""},{"name":"jajjja","email":"","tel":"","comment":""},{"name":"Karin","email":"kleurenius@gmail.com","tel":"","comment":""},{"name":"aa","email":"","tel":"","comment":""},{"name":"aaaa","email":"","tel":"","comment":""},{"name":"","email":"","tel":"","comment":""}]

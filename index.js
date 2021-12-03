@@ -17,12 +17,18 @@ app.listen(port, () => {
 
 app.post("/form", (req,res) => {
    
+    let name = req.body.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    let email = req.body.email.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    let tel = req.body.tel.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    let comment = req.body.comment.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+           
     let post = {        
-        name: req.body.name,
-        email: req.body.email,
-        tel: req.body.tel,
-        comment: req.body.comment
+        name,
+        email,
+        tel,
+        comment,
     }   
+
 
     let readJsonFile = fs.readFileSync(jsonFile);
     let norm = JSON.parse(readJsonFile); 
