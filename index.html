@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
-    <script src=JavaScript/script.js></script>
+    <script src="./script.js"></script>
     <link href="CSS/style.css" rel="stylesheet">
     
 </head>
-<body>
-    <form action="/form" method="post">
+<body onload = "myFunction();">
+    <form action="/form" method="get">
         <p>Välkommen till gästboken!
-            Skriv gärna några ord.
-        </p>
+            Skriv gärna några ord.</p>
         Namn: <input type="text" name="name" id="name"><br>
         <br>
         Email: <input type="text" name="email" id="email"><br>
@@ -21,12 +20,8 @@
         Tel: <input type="text" name="tel" id="tel"><br>
         <br>
         Kommentar: <br><textarea name="comment" id="comment"></textarea>
-        <br>
-    
-        <input type="submit" id="butt" value="Lägg till" name="submit">
-    
+        <br>    
+        <input type="submit" id="butt" value="Lägg till" name="submit">        
     </form>
-
-    <ul id="post"></ul>
 </body>
 </html>
