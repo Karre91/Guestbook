@@ -8,8 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 const jsonFile = "public/posts.json";
 
 app.get("/", (req, res) => {  
-    res.sendFile(__dirname + "/public/HTML/index.html");  
-    console.log("3");
+    res.sendFile(__dirname + "/public/HTML/login.html");  
 }); 
 app.listen(port, () => {
     console.log("Kör servern på localhost:3000");
@@ -29,7 +28,6 @@ app.post("/form", (req,res) => {
         comment,
     }   
 
-
     let readJsonFile = fs.readFileSync(jsonFile);
     let norm = JSON.parse(readJsonFile); 
     norm.push(post);
@@ -40,5 +38,24 @@ app.post("/form", (req,res) => {
     });
 
     res.send("<html><body><p>Inlägg skickat!</p><p>Du skickas nu till startsidan</p><script>var timer = setTimeout(function() {window.location='http://localhost:3000/HTML/index.html'}, 3000);</script></body></html>");
-    
+});
+
+app.post("/login", (req,res) => {
+
+    // let email = req.body.email;
+    // let password = req.body.password;
+    // let testEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
+    // let testPass = /\d{6}/g.test(password);
+
+    // console.log(email);
+    // console.log(testEmail);
+    // console.log(testPass);
+    // console.log("Här");
+    // if (testEmail && testPass) {
+    // res.send("<html><body><p>Inlogg godkänt</p><p>Du skickas nu till gästbokssidan</p><script>var timer = setTimeout(function() {window.location='http://localhost:3000/HTML/index.html'}, 3000);</script></body></html>");
+    // }
+    // else res.send("<html><body><p>Inlogg EJ godkänt</p><p>Du skickas nu tillbaka till login</p><script>var timer = setTimeout(function() {window.location='http://localhost:3000/HTML/login.html'}, 3000);</script></body></html>");
+
+
+
 });

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <script src="../JavaScript/login.js"></script>
+    <link href="../CSS/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <form action="/login"  method="post";>
+    Email: <input type="text" name="userEmail"  id="userEmail">
+    <span class="msg"></span><br>
+    <br>
+    Lösenor: <input type="password" name="pass" id="pass"><span class="msg"></span><br>
+    <br>
+    <input onclick="login();" type="submit" id="logInButton" value="Logga in" name="logIn">
+    </form>
+</body>
