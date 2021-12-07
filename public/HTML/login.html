@@ -11,12 +11,17 @@
 
 </head>
 <body>
-    <form action="/login"  method="post";>
-    Email: <input type="text" name="userEmail"  id="userEmail">
-    <span class="msg"></span><br>
-    <br>
-    Lösenor: <input type="password" name="pass" id="pass"><span class="msg"></span><br>
-    <br>
-    <input onclick="login();" type="submit" id="logInButton" value="Logga in" name="logIn">
-    </form>
+    <div class="start">
+        <h1>Välkommen till gästboken!</h1>
+        <form action="/login"  method="post";>
+        Email:
+        <input class="center" type="text" name="userEmail"  id="userEmail">
+        <br>
+        <br>
+        Lösenord:
+        <input class="center" type="password" name="pass" id="pass"><br>
+        <br>
+        <input onclick="login();" type="submit" id="logInButton" value="Logga in" name="logIn">
+        </form>
+    </div>
 </body>

@@ -16,14 +16,13 @@ let login = function () {
     let email  = document.getElementById("userEmail").value;
     let pass = document.getElementById("pass").value; 
     
-    if (regex(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, email) && regex(/\d{6}/g, pass)){
-        setTimeout(function() {
-        window.location='http://localhost:3000/HTML/index.html'}, 500)
-    }
-    else {
-        setTimeout(function() {
-        window.location='http://localhost:3000/HTML/login.html'}, 500)
-    }   
+    if (!regex(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, email)){
+        alert("Du måste skriva in en giltig email!");
+    } 
+    if (!regex(/\d{6}/g, pass)){
+        alert("Du måste ha ett lösenord bestående av 6 siffror");
+    } 
+    
 }
 
 

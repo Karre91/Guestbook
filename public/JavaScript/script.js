@@ -7,27 +7,45 @@ myFunction = function () {
         let data = JSON.parse(this.response);
         
         for (let i = data.length -1; i >= 0; i--){
+
+            const theDiv = document.createElement("div");
+            theDiv.setAttribute("class","theDiv");
+            
+          
+
+            const outTime = document.createElement("p");
+            outTime.setAttribute("class","outTime"); 
+            outTime.textContent = "Datum: " + data[i].today;
+            
             
             const outName = document.createElement("p");
-            outName.setAttribute("class","postN"); //postn är klassnamnrs
-            outName.textContent = data[i].name;
-            document.body.appendChild(outName);
+            outName.setAttribute("class","outName"); 
+            outName.textContent = "Namn: " + data[i].name;
+            
 
             const outEmail = document.createElement("p");
-            outEmail.setAttribute("class","outEmail"); //postn är klassnamnrs
-            outEmail.textContent = data[i].email;
-            document.body.appendChild(outEmail);
+            outEmail.setAttribute("class","outEmail"); 
+            outEmail.textContent = "Email: " + data[i].email;
+            
 
             const outTel = document.createElement("p");
-            outTel.setAttribute("class","outTel"); //postn är klassnamnrs
-            outTel.textContent = data[i].tel;
-            document.body.appendChild(outTel);
-
-            const outCom = document.createElement("p");
-            outCom.setAttribute("class","outCom"); //postn är klassnamnrs
-            outCom.textContent = data[i].comment;
-            document.body.appendChild(outCom);
+            outTel.setAttribute("class","outTel"); 
+            outTel.textContent = "Telefonnummer: " + data[i].tel;
             
+            const postContainer = document.createElement("div");
+            postContainer.setAttribute("class","postContainer");
+            
+            const outCom = document.createElement("p");
+            outCom.setAttribute("class","outCom"); 
+            outCom.textContent = "Kommentar: " +  data[i].comment;
+            
+            document.body.appendChild(theDiv);
+            theDiv.appendChild(outTime);
+            theDiv.appendChild(outName);
+            theDiv.appendChild(outEmail);
+            theDiv.appendChild(outTel);
+            theDiv.appendChild(outCom);
+        
         }        
     }
     request.send();       
