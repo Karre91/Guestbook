@@ -21,8 +21,7 @@ let login = function () {
     } 
     if (!regex(/\d{6}/g, pass)){
         alert("Du måste ha ett lösenord bestående av 6 siffror");
-    } 
-    
+    }     
 }
 
 
