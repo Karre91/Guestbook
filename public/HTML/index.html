@@ -13,15 +13,15 @@
     <form action="/form" method="post" id="input">
         <p>Välkommen till gästboken!
             Skriv gärna några ord.</p>
-        Namn: <input onchange="checkInput('name');" type="text" name="name" onchange="checkInput();" id="name"><span class="msg"></span><br>
+        Namn: <input onchange="checkInput('name');" type="text" name="name" id="name"><span class="msg"></span><br>
         <br>
         Email: <input onchange="checkInput('email');" type="text" name="email" id="email"><span class="msg"></span><br>
         <br>
         Tel: <input onchange="checkInput('tel');" type="text" name="tel" id="tel"><span class="msg"></span><br>
         <br>
-        Kommentar: <br><textarea name="comment" id="comment"></textarea>
+        Kommentar: <br><textarea onchange="checkInput('comment')" name="comment" id="comment"></textarea>
         <br>    
-        <input  type="submit" id="button" value="Lägg till" name="submit">        
+        <input  type="submit" id="button" value="Lägg till" name="submit"><br>  <br>      
     </form>
      
 </body>

@@ -1,0 +1,16 @@
+.start {
+  margin: auto;
+  border: solid 10px green;
+  text-align: center;
+  padding: 5%;
+  width: 50%;
+}
+.center {
+  margin: auto;
+  margin-top: -20%;
+}
+.theDiv {
+  padding: 2%;
+  border: solid green;
+  width: 20%;
+}
