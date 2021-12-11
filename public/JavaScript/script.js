@@ -60,7 +60,10 @@ let msgPlace = document.getElementsByClassName("msg");
      return true;
  }
  if (!testBool){
-    msgPlace[index].innerHTML = " Input felaktig";
+    if (index == 0) msgPlace[index].innerHTML = " Ett namn innehåller bara bokstäver";
+    else if (index == 1) msgPlace[index].innerHTML = " Du måste ange en giltig email";
+    else if (index == 2) msgPlace[index].innerHTML = " Ett telefonnummer består av minst 6 siffror";
+    
     return false;
  }
  testBool = null; 
